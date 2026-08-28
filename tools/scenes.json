@@ -1,0 +1,227 @@
+[
+  {
+    "id": "start",
+    "chapter": "序章 / 72 小时",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "镜港凌晨 02:17。，一篇《我与琥珀：一篇虚构小说》冲上榜首；十七分钟后，白塔法院的电子回执送进工作室。，，你是\"剪辑师\"。你的工作不是证明谁值得被爱，而是决定什么有资格被相信。",
+    "is_dynamic": false,
+    "char_count": 90
+  },
+  {
+    "id": "receipt",
+    "chapter": "第一章 / 白塔的冷光",
+    "speaker": "书记员",
+    "speaker_key": "clerk",
+    "text": "回执只有三句话：申请已登记；保全请求待审；被申请人提出管辖权异议。，，律师说：\"它不浪漫，但是它目前唯一不需要猜的东西。\"，琥珀盯着热搜问：\"他们会不会把立案写成判决？\"",
+    "is_dynamic": false,
+    "char_count": 85
+  },
+  {
+    "id": "novel",
+    "chapter": "第一章 / 标着虚构的小说",
+    "speaker": "琥珀",
+    "speaker_key": "amber",
+    "text": "小说把十九年暗恋写成一项长期投资：旧照片、包场、旅行、账本、一次\"永不拒绝\"的测试。每一段像证词，每一页又写着\"纯属虚构\"。，，琥珀把屏幕扣在桌上：\"他想让我对一篇小说负责。\"",
+    "is_dynamic": false,
+    "char_count": 88
+  },
+  {
+    "id": "switchboard",
+    "chapter": "第二章 / 热搜调度台",
+    "speaker": "数据员",
+    "speaker_key": "data",
+    "text": "热搜第 1 名：爱情。第 2 名：钱。第 3 名：一张像素极低的截图。，，数据员把三块屏幕推到你面前：\"同一个话题，有三种燃料。你想先拆哪一桶？\"",
+    "is_dynamic": false,
+    "char_count": 73
+  },
+  {
+    "id": "screenshot",
+    "chapter": "第三章 / 截图的祖先",
+    "speaker": "数据员",
+    "speaker_key": "data",
+    "text": "最早的截图来自一个只存活 27 分钟的账号。它先发给了营销群，再被\"路人\"搬运，最后才抵达大众。，，最荒诞的是：文件创建时间早于所谓\"突发新闻\"六小时。",
+    "is_dynamic": false,
+    "char_count": 76
+  },
+  {
+    "id": "call",
+    "chapter": "第四章 / 未接来电",
+    "speaker": "零号",
+    "speaker_key": "zero",
+    "text": "匿名电话接通。对方自称\"零号\"，声线疲惫又笃定：，\"我没有要她说出真相。我只是把我经历过的，写成小说。\"，，你问：\"那为什么同一天递交程序文件？\"电话那头沉默。",
+    "is_dynamic": false,
+    "char_count": 80
+  },
+  {
+    "id": "lounge",
+    "chapter": "第五章 / 第七码头计划",
+    "speaker": "琥珀",
+    "speaker_key": "amber",
+    "text": "琥珀说，小说里所有最刺眼的部分都被归进一个代号：第七码头。，它像一份共同计划，也像一份随时可以重写的交易。谁都没说它究竟是什么。，，\"我不解释私密细节，\"她说，\"不是因为默认了，而是因为我的人生不是供人验货的商品。\"",
+    "is_dynamic": true,
+    "char_count": 108
+  },
+  {
+    "id": "ledger",
+    "chapter": "第六章 / 情感预算表",
+    "speaker": "会计",
+    "speaker_key": "accountant",
+    "text": "桌上摆着一张被媒体称为\"爱情账单\"的文件。你发现它并不是账本，而是一份内部预算模板：餐厅、机票、礼物、律师、热搜、危机预案。，，最末一栏叫：，\"人物离场后的叙事资产。\"",
+    "is_dynamic": false,
+    "char_count": 84
+  },
+  {
+    "id": "archive",
+    "chapter": "第七章 / 四十七页信任报告",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "匿名网盘里有一份《琥珀风险报告》：四十七页，封面写\"信任模型\"。文件末页却有系统注释：，\"人物资料待补；传播预案已完成。\"，，原来被审计的不是琥珀，是公众的注意力。",
+    "is_dynamic": false,
+    "char_count": 82
+  },
+  {
+    "id": "oracle",
+    "chapter": "第八章 / 甲骨文",
+    "speaker": "甲骨文 AI",
+    "speaker_key": "oracle",
+    "text": "零号把一段对话记录交给媒体，称自己曾向 AI 征求意见。你调用同一套模型，输入同一份小说，得到的建议是：，\"不要付款。不要回应。把风险最小化。\"，，琥珀问：\"如果输入本身是一篇小说，AI 在替谁做决定？\"",
+    "is_dynamic": true,
+    "char_count": 102
+  },
+  {
+    "id": "backstage",
+    "chapter": "第九章 / 发布会后台",
+    "speaker": "经纪人",
+    "speaker_key": "agent",
+    "text": "距离直播还有 18 分钟。赞助商希望你们\"情绪化一点\"；律师希望你们\"像一台打印机\"；琥珀正在删掉自己的发言稿。，，她说：\"所有人都在教我怎么扮演受害者，或者怎么扮演反派。\"",
+    "is_dynamic": false,
+    "char_count": 87
+  },
+  {
+    "id": "stage",
+    "chapter": "第十章 / 镜港发布会",
+    "speaker": "琥珀",
+    "speaker_key": "amber",
+    "text": "镜头亮起。第一个问题果然是猎奇细节。，，琥珀没有回答，而是把一枚写着\"未审理\"的金属牌放在台上：，\"请把未经审理的故事留在故事里。你可以争一笔钱，不能起诉一个人该怎样被理解。\"",
+    "is_dynamic": false,
+    "char_count": 88
+  },
+  {
+    "id": "choir",
+    "chapter": "第十一章 / 弹幕合唱",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "弹幕分成两派，又很快变成三派、四派。有人要结论，有人要细节，有人第一次问：，\"为什么一份程序文件，比一篇小说更难传播？\"，，数据员把控制台交给你。",
+    "is_dynamic": false,
+    "char_count": 73
+  },
+  {
+    "id": "dawn",
+    "chapter": "第十二章 / 天亮前",
+    "speaker": "琥珀",
+    "speaker_key": "amber",
+    "text": "镜港快天亮了。白塔仍然没有判决；热搜已经开始寻找下一位主角。，，琥珀问你：\"剪辑师，到了最后，你觉得我们赢了什么？\"",
+    "is_dynamic": false,
+    "char_count": 58
+  },
+  {
+    "id": "ev-60",
+    "chapter": "危机 / 60 小时",
+    "speaker": "监控台",
+    "speaker_key": "monitor",
+    "text": "三个头部营销号同时发出同一张截图。热搜前三都被它占领。原始截图正在被快速二创。",
+    "is_dynamic": false,
+    "char_count": 39
+  },
+  {
+    "id": "ev-48",
+    "chapter": "危机 / 48 小时",
+    "speaker": "经纪人",
+    "speaker_key": "agent",
+    "text": "琥珀在一次直播中被问到小说里的某个细节。她的表情在两秒内塌了。直播持续了十二分钟。录像正在被二创。",
+    "is_dynamic": false,
+    "char_count": 49
+  },
+  {
+    "id": "ev-36",
+    "chapter": "危机 / 36 小时",
+    "speaker": "数据员",
+    "speaker_key": "data",
+    "text": "那个只活了 27 分钟的账号被人肉出来了——是某营销公司的实习生。媒体开始追问：\"谁买了流量？\"",
+    "is_dynamic": false,
+    "char_count": 48
+  },
+  {
+    "id": "ev-24",
+    "chapter": "危机 / 24 小时",
+    "speaker": "书记员",
+    "speaker_key": "clerk",
+    "text": "法院送达传票：48 小时内提交答辩。律师说：\"这是分水岭。做了就是做了，没做就是没做。\"",
+    "is_dynamic": false,
+    "char_count": 44
+  },
+  {
+    "id": "ev-12",
+    "chapter": "危机 / 12 小时",
+    "speaker": "经纪人",
+    "speaker_key": "agent",
+    "text": "零号公开发声：\"我只是写了我经历过的事。\"发布会前十二小时。他在抢叙事。",
+    "is_dynamic": false,
+    "char_count": 36
+  },
+  {
+    "id": "ending_a",
+    "chapter": "终章 / 第七码头",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "结局零 / 算法声明。庭审是结束了。但新闻发布会上发言的不是琥珀——是一份被署了你名字的算法声明。她的边界由你交给了工具。工具按它的方式完成了任务。你拿到了热度，工具拿到了署名权。",
+    "is_dynamic": true,
+    "char_count": 90
+  },
+  {
+    "id": "ending_b",
+    "chapter": "终章 / 第七码头",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "结局一 / 没有故事的人。白塔的程序缓慢推进，热搜终于失去燃料。琥珀没有赢得一场口水战；她只是拒绝被写成任何一种方便转发的人。第七码头的灯熄灭时，镜港第一次把“未审理”读成完整的四个字。",
+    "is_dynamic": true,
+    "char_count": 93
+  },
+  {
+    "id": "ending_c",
+    "chapter": "终章 / 第七码头",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "结局二 / 鲨鱼也会哭。你们都赢得了热搜。小说被剪成证词，证据被剪成梗图，所有人都在自己的版本里胜诉。几周后，没有人记得争议是什么；镜港只记得那晚的流量创下纪录。",
+    "is_dynamic": true,
+    "char_count": 81
+  },
+  {
+    "id": "ending_d",
+    "chapter": "终章 / 第七码头",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "结局三 / 草稿箱未删除。你公开了流量预案的空白模板。人们突然看见，每一场“偶然爆发”的舆论，都预留了主角、反派、反转和广告位。没有人因此变得无辜，但第一次，有人看见了剧本的提词器。",
+    "is_dynamic": true,
+    "char_count": 91
+  },
+  {
+    "id": "ending_hidden",
+    "chapter": "终章 / 第七码头",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "结局特 / 白塔的钟声。你手里有完整的三件证据。你没有动用过 AI。程序时间线、传播预案、原始录音，已经整整齐齐地摆在白塔的案卷里。法庭不是被舆论左右的。也不是被 AI 加速的。它被一份完整的事实推着，缓慢地、不可逆地走到了它的位置。第七码头的灯熄灭的时候，白塔的钟敲了。镜港第一次听见——“未审理”不是一句话，是一个过程。",
+    "is_dynamic": true,
+    "char_count": 162
+  },
+  {
+    "id": "ending",
+    "chapter": "终章 / 第七码头",
+    "speaker": "旁白",
+    "speaker_key": "narrator",
+    "text": "结局特 / 白塔的钟声，",
+    "is_dynamic": true,
+    "char_count": 12
+  }
+]

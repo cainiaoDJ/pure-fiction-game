@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#120d22">
+  <title>纯属虚构：第七码头</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game" class="scene-harbor" aria-live="polite">
+    <div class="grain"></div>
+    <div class="game-shell">
+    <header class="hud">
+      <div><span class="eyebrow">MIRROR HARBOR / <span id="clock">72:00</span></span><strong>纯属虚构：第七码头</strong></div>
+      <div class="controls"><button id="sound" class="sound-button" aria-pressed="false">♪ 环境音</button><button id="voice-toggle" class="sound-button" aria-pressed="true">🎙 配音</button><button id="restart" class="icon-button" aria-label="重新开始">↻</button></div>
+    </header>
+    <section class="meter" aria-label="叙事可信度">
+      <div class="meter-title">叙事可信度 <span id="score">50</span></div>
+      <div class="meter-track"><i id="score-bar"></i></div>
+      <p id="source-label">尚未选择信息来源</p>
+      <div class="evidence-row" id="evidence-row"><span class="ev-label">证 据</span><span class="ev-empty">暂未持有</span></div>
+      <div class="trust-row" id="trust-row"><span class="ev-label">信 任</span></div>
+    </section>
+    <section class="stage">
+      <div class="chapter" id="chapter">序章 / 热搜抵港</div>
+      <article class="dialogue-box">
+        <div class="portrait-card" id="portrait-card" style="display:none">
+          <div class="portrait-frame"><img id="portrait-img" alt="" src=""></div>
+          <span class="portrait-name" id="portrait-name"></span>
+        </div>
+        <div class="dialogue-content">
+          <div class="speaker" id="speaker">旁白</div>
+          <p id="text"></p>
+          <div id="choices" class="choices"></div>
+        </div>
+      </article>
+    </section>
+    <footer class="footer"><span>点击选项推进剧情</span><span>© 架空创作 · 不对应现实人物或事件</span></footer>
+    </div>
+  </main>
+  <audio id="voice" preload="auto"></audio>
+  <div id="failure" class="failure-screen" hidden>
+    <div class="stamp">档案 / <span id="failure-stamp">失控归档</span></div>
+    <h1 id="failure-title">叙事失控</h1>
+    <p id="failure-body"></p>
+    <div class="failure-stats">
+      <div>最终叙事可信度：<span id="failure-score">0</span> / 100</div>
+      <div>剩余时间：<span id="failure-time">00:00</span></div>
+    </div>
+    <button class="choice" id="failure-restart">重新开始</button>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

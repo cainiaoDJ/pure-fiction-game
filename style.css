@@ -1,0 +1,109 @@
+:root{--ink:#f4efff;--gold:#f5ce72;--cyan:#65f1eb;--pink:#ff80ac}*{box-sizing:border-box}body{margin:0;background:#08060e;color:var(--ink);font-family:ui-serif,"Songti SC",Georgia,serif;overflow:hidden}#game{min-height:100svh;display:flex;flex-direction:column;position:relative;padding:22px 5vw;background:#0d0a16 center/cover no-repeat;transition:background .45s ease;animation:sceneIn .55s ease}#game.scene-harbor{background-image:linear-gradient(#0806149c,#08050de8),url('assets/mirror-harbor.webp')}#game.scene-hotel{background-image:linear-gradient(#0806148c,#08050de8),url('assets/empty-hotel.webp')}#game.scene-court{background-image:linear-gradient(#160d178c,#08050de8),url('assets/white-tower.webp')}#game.scene-server{background-image:linear-gradient(#07151b8c,#08050de8),url('assets/underwater-server.webp')}#game.scene-stage{background-image:linear-gradient(#25051e9c,#08050de8),url('assets/scene-stage.webp')}#game.scene-ending{background-image:linear-gradient(#0907129c,#08050de8),url('assets/scene-ending.webp')}.grain{position:absolute;inset:0;opacity:.13;pointer-events:none;background:repeating-linear-gradient(0deg,#fff1 0 1px,transparent 1px 4px)}.hud{display:flex;justify-content:space-between;align-items:flex-start;text-shadow:0 2px 4px #000}.hud strong{display:block;font-size:clamp(19px,3vw,30px);letter-spacing:.07em}.eyebrow{font:700 11px monospace;color:var(--cyan);letter-spacing:.12em}.controls{display:flex;gap:8px}.icon-button,.sound-button{border:1px solid #ffffff66;color:#fff;cursor:pointer}.icon-button{border-radius:50%;background:#130e21aa;width:39px;height:39px;font-size:25px}.sound-button{border-radius:19px;background:#091c25cc;color:#a9fffa;padding:8px 11px;font:700 12px monospace}.sound-button[aria-pressed="true"]{box-shadow:0 0 16px #4ef5e488;animation:pulse 1.3s infinite}.meter{position:absolute;right:5vw;top:91px;width:min(245px,43vw);padding:10px 12px;border:1px solid #ffffff2e;border-radius:8px;background:#100c1acc;font-size:12px}.meter-title{display:flex;justify-content:space-between;color:var(--gold)}.meter-track{height:7px;margin:7px 0;border-radius:9px;background:#342944}.meter-track i{display:block;height:100%;width:50%;border-radius:inherit;background:linear-gradient(90deg,var(--pink),var(--gold),var(--cyan));transition:width .3s;box-shadow:0 0 0 rgba(245,206,114,0)}.meter-track i.pulse{animation:scorePulse .6s ease-out}
+@keyframes scorePulse{0%{box-shadow:0 0 0 rgba(245,206,114,0);filter:brightness(1)}25%{box-shadow:0 0 14px rgba(245,206,114,.95),0 0 28px rgba(245,206,114,.55);filter:brightness(1.4)}100%{box-shadow:0 0 0 rgba(245,206,114,0);filter:brightness(1)}}.meter p{min-height:17px;margin:0;color:#ded4e7}
+.evidence-row{font:11px monospace;letter-spacing:.05em;margin-top:8px;padding-top:7px;border-top:1px dashed #ffffff1a;display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-height:20px}
+.evidence-row .ev-label{color:var(--gold);font-weight:700;letter-spacing:.18em;flex-shrink:0}
+.evidence-row .ev-empty{color:#7a6e8c;font-style:italic;font-size:10px}
+.evidence-row .ev-chip{display:inline-block;padding:2px 7px;border:1px solid var(--gold);border-radius:9px;color:var(--gold);font-weight:700;background:rgba(245,206,114,.08);font-size:10px;letter-spacing:.04em;animation:evChipIn .35s ease-out}
+@keyframes evChipIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+.evidence-row.pulse{animation:evRowPulse .6s ease-out}
+@keyframes evRowPulse{0%{box-shadow:0 0 0 rgba(245,206,114,0)}30%{box-shadow:0 0 14px rgba(245,206,114,.85);border-top-color:var(--gold)}100%{box-shadow:0 0 0 rgba(245,206,114,0)}}
+.trust-row{font:10px monospace;letter-spacing:.05em;margin-top:5px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;min-height:14px}
+.trust-row .ev-label{color:var(--gold);font-weight:700;letter-spacing:.18em;flex-shrink:0;font-size:10px}
+.trust-row .trust-chip{display:inline-block;padding:1px 5px;border:1px solid currentColor;border-radius:7px;font-weight:700;font-size:10px;letter-spacing:.04em;opacity:.85}
+.choice .ev-tag{color:var(--gold);font-weight:700;font-size:11px;letter-spacing:.05em}
+.choice .ev-burn-tag{color:var(--pink);font-weight:700;font-size:11px;letter-spacing:.05em}
+.choice.ev-burn{border-color:rgba(255,128,172,.4);background:linear-gradient(180deg,#281d38dc,#3a1f30dc)}.stage{display:flex;flex:1;flex-direction:column;justify-content:flex-end;width:100%;max-width:1100px;margin:auto}.chapter{margin:0 0 12px;font:700 13px monospace;color:var(--gold);letter-spacing:.12em;text-shadow:0 2px 4px #000}.dialogue-box{min-height:215px;padding:17px 22px 20px;border:2px solid #ebd19b;border-radius:11px;background:linear-gradient(120deg,#160e23f3,#090914f2);box-shadow:0 10px 35px #000b;animation:dialogueIn .38s ease;display:flex;gap:14px;align-items:flex-start}
+.portrait-card{display:flex;flex-direction:column;align-items:center;grid-row:1/3;margin-top:-32px;animation:dialogueIn .5s ease}
+.portrait-card .portrait-frame{width:74px;height:92px;border:2px solid var(--gold);border-radius:4px;overflow:hidden;background:#000;box-shadow:0 2px 8px #000a;animation:portraitBreathe 3.6s ease-in-out infinite alternate}
+.portrait-card .portrait-frame img{width:100%;height:100%;object-fit:cover;display:block;animation:portraitBlink 5.4s infinite}
+.portrait-card .portrait-name{margin-top:5px;font:700 11px "Songti SC",serif;letter-spacing:.22em;color:var(--gold)}
+.portrait-card.trust-high .portrait-frame{border-color:#80ffd0;box-shadow:0 0 14px rgba(128,255,208,.45),0 2px 8px #000a}
+.portrait-card.trust-high .portrait-name{color:#80ffd0}
+.portrait-card.trust-low .portrait-frame{border-color:#ff8a8a;box-shadow:0 0 14px rgba(255,138,138,.45),0 2px 8px #000a}
+.portrait-card.trust-low .portrait-name{color:#ff8a8a}
+.portrait-card .portrait-frame.pulse{animation:portraitBreathe 3.6s ease-in-out infinite alternate,portraitPulse .6s ease-out}
+@keyframes portraitBreathe{from{transform:scale(1)}to{transform:scale(1.018)}}
+@keyframes portraitBlink{0%,92%,100%{transform:scaleY(1)}94%{transform:scaleY(0.08)}96%{transform:scaleY(1)}}
+@keyframes portraitPulse{0%{box-shadow:0 0 0 rgba(245,206,114,0),0 2px 8px #000a}35%{box-shadow:0 0 24px rgba(245,206,114,1),0 0 40px rgba(245,206,114,.6),0 2px 8px #000a}100%{box-shadow:0 0 0 rgba(245,206,114,0),0 2px 8px #000a}}
+.dialogue-content{min-width:0;flex:1}.speaker{display:inline-block;margin-top:-38px;padding:3px 13px;border-radius:4px;background:#d8b76d;color:#201223;font-weight:900;letter-spacing:.09em}.dialogue-box p{margin:12px 0 16px;max-width:920px;font-size:clamp(16px,2.15vw,20px);line-height:1.72;text-shadow:0 1px #000}.choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.choice{padding:10px 13px;border:1px solid #b4a68a88;border-radius:6px;background:#281d38dc;color:#f6eeda;text-align:left;font:700 14px/1.5 ui-serif,"Songti SC",serif;cursor:pointer;transition:.18s}.choice:hover,.choice:focus{transform:translateY(-2px);border-color:#ffe18e;background:#45305d;color:#fff}.choice:active{transform:translateY(1px) scale(.985);filter:brightness(1.35)}.choice small{display:block;margin-top:2px;color:var(--cyan)}.footer{display:flex;justify-content:space-between;gap:10px;margin-top:12px;color:#c2b5ca;font:11px monospace}.ending-title{color:#ffda73;font-size:1.2em;font-weight:900}
+.ending-title.hidden-ending{color:#fff;font-size:1.3em;letter-spacing:.2em;text-shadow:0 0 18px #f5ce72,0 0 36px rgba(245,206,114,.6);animation:hiddenEndingIn 1.2s ease-out}
+@keyframes hiddenEndingIn{from{opacity:0;letter-spacing:.6em;filter:blur(8px)}to{opacity:1;letter-spacing:.2em;filter:blur(0)}}.click-ripple{position:fixed;width:0;height:0;border-radius:50%;background:radial-gradient(circle,rgba(245,206,114,.55) 0%,rgba(245,206,114,0) 70%);pointer-events:none;transform:translate(-50%,-50%);z-index:9999;animation:clickRipple .55s ease-out forwards}@keyframes clickRipple{0%{width:0;height:0;opacity:.85}100%{width:220px;height:220px;opacity:0}}@keyframes sceneIn{from{filter:brightness(.45)}to{filter:brightness(1)}}@keyframes dialogueIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}@keyframes pulse{50%{filter:brightness(1.5)}}@media(max-width:650px){#game{padding:16px}.meter{top:80px;right:16px}.dialogue-box{min-height:250px;padding:14px}.choices{grid-template-columns:1fr}.footer span:last-child{display:none}.hud strong{max-width:230px}.dialogue-box p{font-size:16px}}
+
+/* 倒计时颜色态 */
+#clock{color:var(--cyan);font-variant-numeric:tabular-nums;transition:color .3s}
+#clock.warning{color:var(--gold)}
+#clock.critical{color:#ff5e5e;animation:clockPulse 1s infinite}
+@keyframes clockPulse{50%{opacity:.55}}
+
+/* 上一选择即时反馈（侧栏上方一行） */
+.side-effect{font:600 13px/1.5 ui-serif,"Songti SC",serif;color:var(--gold);padding:8px 14px 10px;margin:0 0 12px;border-left:2px solid var(--gold);background:rgba(245,206,114,.06);border-radius:0 4px 4px 0;animation:sideEffectIn .4s ease-out;letter-spacing:.04em}
+.side-effect.ai-voice{color:var(--pink);border-left-color:var(--pink);background:rgba(255,128,172,.07)}
+.ai-debt-badge{display:inline-block;margin-left:8px;padding:1px 7px;border:1px solid var(--pink);border-radius:8px;font:700 10px monospace;color:var(--pink);letter-spacing:.05em;vertical-align:middle}
+@keyframes sideEffectIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+
+/* 阈值跨过：全屏短暂爆点 */
+.score-burst{position:fixed;inset:0;z-index:9000;display:flex;align-items:flex-start;justify-content:center;padding-top:30vh;pointer-events:none;opacity:0;overflow:hidden}
+
+/* Tier 2A: 危机事件 — 红屏背景 + 5px 红框 + 角标 + 角部斜纹 */
+#game.crisis-mode{box-shadow:inset 0 0 0 6px #ff2020,inset 0 0 100px rgba(255,20,20,.45);animation:crisisBorder 1.4s ease-in-out infinite}
+#game.crisis-mode::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(255,40,40,.12) 0 14px,transparent 14px 28px);pointer-events:none;z-index:1}
+#game.crisis-mode .hud{position:relative;z-index:5}
+#game.crisis-mode .meter{position:relative;z-index:5}
+#game.crisis-mode::after{content:"⚠ 危 机 事 件";position:fixed;top:14px;right:14px;padding:8px 18px;border:2px solid #ff2020;background:#3a0808;color:#ff6060;font:900 14px monospace;letter-spacing:.36em;border-radius:4px;z-index:9999;animation:crisisBadge 1.2s ease-in-out infinite;text-shadow:0 0 12px #ff2020;box-shadow:0 0 24px rgba(255,40,40,.7),inset 0 0 12px rgba(255,40,40,.3)}
+@keyframes crisisBorder{50%{box-shadow:inset 0 0 0 6px #ff5050,inset 0 0 140px rgba(255,20,20,.7)}}
+@keyframes crisisBadge{50%{box-shadow:0 0 36px rgba(255,40,40,1),inset 0 0 18px rgba(255,40,40,.5);letter-spacing:.46em;color:#ff9090}}
+.score-burst .burst-text{font:900 clamp(26px,4vw,40px)/1.3 "Songti SC",serif;letter-spacing:.22em;position:relative;z-index:3}
+.score-burst.gold{background:radial-gradient(ellipse at center,rgba(255,235,180,.7) 0%,rgba(245,206,114,.35) 30%,transparent 70%);animation:burstGold 2.2s cubic-bezier(.15,.7,.3,1) forwards}
+.score-burst.gold::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,#fff8e0 0%,rgba(255,255,255,0) 25%);animation:flashGold .45s ease-out forwards;z-index:1}
+.score-burst.gold::after{content:"";position:absolute;left:50%;top:50%;width:0;height:0;border-radius:50%;border:5px solid #f5ce72;transform:translate(-50%,-50%);animation:ringGold 1.8s cubic-bezier(.2,.5,.3,1) forwards;box-shadow:0 0 40px #f5ce72,inset 0 0 25px rgba(245,206,114,.7);z-index:2}
+.score-burst.gold .burst-text{color:#fff;text-shadow:0 0 24px #f5ce72,0 0 48px #f5ce72,0 0 80px rgba(245,206,114,.8),0 4px 12px #000;animation:textGold 2.2s cubic-bezier(.15,.7,.3,1) forwards}
+.score-burst.gold{animation:burstGold 2.2s cubic-bezier(.15,.7,.3,1) forwards, hostShake .45s ease-out}
+.score-burst.red{background:linear-gradient(0deg,rgba(255,30,30,.28) 0%,transparent 60%);animation:burstRed 1.8s ease-out forwards}
+.score-burst.red::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(255,30,30,.18) 2px 3px);mix-blend-mode:overlay;animation:scanRed 1.8s linear forwards}
+.score-burst.red::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(255,30,30,.5) 0%,transparent 60%);animation:flashRed .35s ease-out forwards;mix-blend-mode:screen}
+.score-burst.red .burst-text{color:#ff8080;text-shadow:0 0 16px #ff2020,0 0 40px rgba(255,32,32,.7),2px 0 0 #ff2020,-2px 0 0 #00ffff;animation:textRed 1.8s ease-out forwards;letter-spacing:.26em}
+.score-burst.red{animation:burstRed 1.8s ease-out forwards, hostShake .5s ease-out}
+@keyframes burstGold{0%{opacity:0}8%{opacity:1}100%{opacity:0}}
+@keyframes flashGold{0%{opacity:0;transform:scale(.4)}25%{opacity:.95}100%{opacity:0;transform:scale(2.5)}}
+@keyframes ringGold{0%{width:0;height:0;opacity:1;border-width:10px}100%{width:140vmax;height:140vmax;opacity:0;border-width:1px}}
+@keyframes textGold{0%{opacity:0;transform:scale(.4) translateY(30px);filter:blur(10px) brightness(1.5)}25%{opacity:1;transform:scale(1.18) translateY(0);filter:blur(0)}45%{transform:scale(1)}100%{opacity:0;transform:scale(1.05) translateY(-40px);filter:blur(6px) brightness(1.2)}}
+@keyframes hostShake{0%,100%{transform:translate(0,0)}15%{transform:translate(-5px,3px)}30%{transform:translate(4px,-4px)}45%{transform:translate(-3px,2px)}60%{transform:translate(3px,-2px)}75%{transform:translate(-2px,1px)}}
+@keyframes burstRed{0%{opacity:0}8%{opacity:1}100%{opacity:0}}
+@keyframes flashRed{0%{opacity:0}25%{opacity:.85}100%{opacity:0}}
+@keyframes scanRed{0%{background-position:0 0}100%{background-position:0 100vh}}
+@keyframes textRed{0%{opacity:0;transform:scale(.5) translateX(-15px);filter:blur(8px)}12%{opacity:1;transform:scale(1.1) translateX(8px);filter:blur(0) hue-rotate(20deg)}25%{transform:translateX(-4px)}35%{transform:translateX(3px)}100%{opacity:0;transform:scale(1.05) translateX(0);filter:blur(4px)}}
+
+/* 失败归档屏（叙事失控 / 错过终局 / AI 接管） */
+.failure-screen{position:fixed;inset:0;z-index:10000;background:radial-gradient(ellipse at center,#2a0606 0%,#0a0202 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6vw;animation:failIn .8s ease-out}
+.failure-screen[hidden]{display:none}
+.failure-screen .stamp{font:700 11px monospace;color:#ff8080;letter-spacing:.4em;margin-bottom:28px;text-transform:uppercase}
+.failure-screen h1{font:900 36px/1.2 "Songti SC",serif;color:#ff4d4d;letter-spacing:.15em;margin:0 0 28px;text-shadow:0 0 28px rgba(255,77,77,.4)}
+.failure-screen p{font:15px/1.85 "Songti SC",serif;color:#c2a0a0;max-width:520px;margin:0 0 32px;white-space:pre-line}
+.failure-screen .failure-stats{font:12px monospace;color:#ff8080;letter-spacing:.15em;margin-bottom:36px;line-height:1.9}
+.failure-screen .failure-stats span{color:#fff;font-weight:700;font-size:14px}
+.failure-screen .choice{padding:14px 36px;font:700 14px monospace;letter-spacing:.15em}
+@keyframes failIn{from{opacity:0}to{opacity:1}}
+
+/* 宽屏：把 HUD、案件面板和对话区收进同一张“游戏桌面”，避免半屏布局被横向拉散。 */
+.game-shell{width:min(100%,1480px);min-height:calc(100svh - 44px);margin:0 auto;position:relative;display:flex;flex:1;flex-direction:column}
+@media (min-width:1080px){
+  #game{padding:clamp(20px,2.6vw,44px)}
+  .game-shell{min-height:calc(100svh - clamp(40px,5.2vw,88px));display:grid;grid-template-columns:minmax(0,1fr) minmax(250px,300px);grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"hud hud" "stage meter" "footer footer";column-gap:clamp(20px,2.2vw,36px);row-gap:14px}
+  .hud{grid-area:hud;align-items:center;padding:0 2px 13px;border-bottom:1px solid rgba(255,255,255,.15)}
+  .hud strong{font-size:clamp(22px,1.65vw,29px)}
+  .meter{grid-area:meter;position:static;width:100%;align-self:start;margin-top:8px;padding:15px 16px 16px;border-color:rgba(245,206,114,.42);background:linear-gradient(160deg,rgba(22,14,35,.91),rgba(8,9,20,.82));box-shadow:0 16px 38px rgba(0,0,0,.28);backdrop-filter:blur(9px)}
+  .meter::before{content:"CASE FILE / LIVE";display:block;margin-bottom:10px;color:rgba(101,241,235,.78);font:700 10px monospace;letter-spacing:.16em}
+  .meter-title{font-size:14px}.meter p{margin-top:3px}.evidence-row{margin-top:11px}.trust-row{margin-top:8px}
+  .stage{grid-area:stage;width:auto;max-width:none;min-width:0;margin:0;padding-bottom:3px}
+  .chapter{margin-bottom:14px;padding-left:2px}
+  .dialogue-box{min-height:242px;padding:22px 26px 24px;gap:18px;border-color:rgba(235,209,155,.9);box-shadow:0 18px 52px rgba(0,0,0,.6),inset 0 1px rgba(255,255,255,.08);backdrop-filter:blur(7px)}
+  .portrait-card{margin-top:-38px}.portrait-card .portrait-frame{width:88px;height:110px}.portrait-card .portrait-name{font-size:12px}.speaker{margin-top:-43px}.dialogue-content{flex:1}.dialogue-box p{max-width:1050px;font-size:clamp(17px,1.25vw,20px);line-height:1.78}.choices{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}.choice{padding:12px 14px}
+  .footer{grid-area:footer;margin-top:0;padding-top:12px;border-top:1px solid rgba(255,255,255,.12)}
+  #game.crisis-mode .meter{position:relative;z-index:5}
+}
+@media (min-width:1080px) and (max-height:760px){
+  .game-shell{row-gap:8px}.hud{padding-bottom:8px}.meter{margin-top:0;padding:11px 13px}.meter::before{margin-bottom:6px}.stage{padding-top:0}.dialogue-box{min-height:200px;padding:17px 22px 19px}.dialogue-box p{margin:9px 0 11px;line-height:1.62}.choice{padding:8px 11px}.footer{padding-top:8px}
+}
+@media (max-width:1079px){.game-shell{min-height:calc(100svh - 44px)}.meter{right:0}}
+.stage.has-portrait .chapter{margin-bottom:44px}
+@media (min-width:1080px) and (max-height:760px){.stage.has-portrait .chapter{margin-bottom:32px}}

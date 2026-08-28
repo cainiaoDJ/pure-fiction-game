@@ -1,0 +1,5 @@
+.DS_Store
+.openai/
+*.log
+.gitignore.*
+assets/_backup/
